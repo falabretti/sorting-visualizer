@@ -3,5 +3,6 @@ body {
 }
 
 .actions-container * {
-    margin: 0 12px;
+    margin-left: 6px !important;
+    margin-right: 6px !important;
 }
