@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "plugin:import/react"
+    ],
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js",".jsx"]
+          }
+        }
+    }
+}

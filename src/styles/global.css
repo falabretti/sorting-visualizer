@@ -1,0 +1,7 @@
+body {
+    background-color: #F2F2F2;
+}
+
+.actions-container * {
+    margin: 0 12px;
+}
