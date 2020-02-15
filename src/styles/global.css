@@ -6,3 +6,27 @@ body {
     margin-left: 6px !important;
     margin-right: 6px !important;
 }
+
+.bars-card {
+    height: 60vh;
+}
+
+.bars-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.sorting-bar {
+    background-color: #3B8CDE;
+    margin: 0 0.5px;
+}
+
+.stats-container {
+    margin-top: 18px !important;
+}
+
+.options-card {
+    width: max-content;
+    margin-top: 24px;
+}

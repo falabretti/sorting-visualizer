@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Bar = ({ width, height }) => {
+const Bar = ({ id, width, height }) => {
     return (
-        <div style={{ backgroundColor: '#3B8CDE', width: `${width}%`, height: `${height}px`, margin: '0 1px' }}></div>
+        <div id={id} style={{ width: `${width}%`, height: `${height}px` }} className="sorting-bar"></div>
     );
 }
 

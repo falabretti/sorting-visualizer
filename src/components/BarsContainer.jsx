@@ -1,23 +1,23 @@
 import React from 'react';
 import { Card, CardContent, Grid } from '@material-ui/core';
 import { Bar } from './Bar';
+import { useSelector, useDispatch } from 'react-redux';
+import { randomize } from '../_actions/sort.actions';
 
 const BarsContainer = () => {
+    const dispatch = useDispatch();
+    const values = useSelector(state => state.sort.values);
 
-    const count = 300;
-    const bars = [];
-
-    for (let i = 0; i < count; i++) {
-        const value = Math.ceil(Math.random() * 150);
-        bars.push(value);
+    if (!(values && values.length)) {
+        dispatch(randomize());
     }
 
     return (
         <Grid item xs={12}>
-            <Card style={{ height: '60vh' }}>
-                <CardContent style={{ display: 'flex', height: '100%', alignItems: 'center' }}>
-                    {bars.map((value, idx) => (
-                        <Bar key={`${value}-${idx}`} width={100 / count} height={value * 3} />
+            <Card className="bars-card">
+                <CardContent className="bars-container">
+                    {values.map((value, idx) => (
+                        <Bar id={`bar-${idx}`} key={`${value}-${idx}`} width={100 / values.length} height={value} />
                     ))}
                 </CardContent>
             </Card>
